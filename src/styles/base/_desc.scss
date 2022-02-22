@@ -5,10 +5,44 @@
     max-width: 100%;
     font-size: 28px;
     font-weight: 400;
+
     &--margin-bottom-90 {
         margin-bottom: 90px;
     }
+
     &--color-black {
         color: #374754;
+    }
+
+    &--display {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .desc {
+        &--margin-bottom-70 {
+            margin-bottom: 70px;
+        }
+
+        &--display {
+            display: block;
+        }
+
+        &--margin-bottom-90 {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:575px) {
+    .desc {
+        &--display {
+            display: block;
+        }
+
+        &--small-screen {
+            width: 300px;
+        }
     }
 }
