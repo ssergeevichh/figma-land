@@ -1,0 +1,14 @@
+.desc {
+    text-align: center;
+    margin: 0 auto;
+    width: 532px;
+    max-width: 100%;
+    font-size: 28px;
+    font-weight: 400;
+    &--margin-bottom-90 {
+        margin-bottom: 90px;
+    }
+    &--color-black {
+        color: #374754;
+    }
+}

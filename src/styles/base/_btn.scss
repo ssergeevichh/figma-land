@@ -1,0 +1,15 @@
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 11px 65px;
+    color: #fff;
+    font-size: 20px;
+    background-color: $main-color;
+    border-radius: $border-radius;
+    border: none;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #40a3ff;
+    }
+}

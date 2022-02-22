@@ -1,0 +1,271 @@
+.header {
+    background-image: url('src/assets/img/bg-main.jpg');
+    min-height: 930px;
+    padding-top: 30px;
+    margin-bottom: 120px;
+}
+
+
+.menu {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__item {
+        font-size: 15px;
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.offer-component {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-auto-rows: auto;
+    margin-bottom: 175px;
+}
+
+.social-block {
+    align-items: center;
+    justify-content: end;
+    display: flex;
+    height: auto;
+    width: 100%;
+
+    &__item {
+
+        padding: 0 12px;
+    }
+
+    svg {
+        &:hover {
+            path {
+                transition: all .3s;
+                fill: $main-color;
+            }
+        }
+    }
+
+
+}
+
+.hamburger {
+    display: none;
+}
+
+.introduction {
+    margin: 0 auto;
+    width: 750px;
+    max-width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        text-align: center;
+        font-size: 74px;
+        font-weight: 700;
+        margin-bottom: 27px;
+    }
+
+}
+
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-close {
+    display: none;
+
+}
+
+.header-triangles {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    &__left {
+        clip-path: polygon(0 30%, 0% 100%, 100% 100%);
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        height: 211px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    &__right {
+        clip-path: polygon(100% 30%, 100% 100%, 0% 100%);
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 211px;
+        background-color: rgb(255, 255, 255);
+
+    }
+}
+
+
+
+@media(max-width:991px) {
+    .offer-component {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .menu {
+        order: 2;
+    }
+
+    .social-block {
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        flex-direction: column;
+        align-items: flex-end;
+
+        &__item {
+            padding: 10px 0;
+        }
+    }
+
+    .menu-wrapper {
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+
+}
+
+@media(max-width:768px) {
+    .offer-component {
+        grid-template-columns: 170px 1fr;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .introduction {
+        &__title {
+            font-size: 50px;
+        }
+
+        &__desc {
+            font-size: 18px;
+        }
+    }
+}
+
+
+@media (max-width:575px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .social-block {
+        display: none;
+    }
+
+
+
+    .menu {
+        transition: all .3s;
+        position: fixed;
+        justify-content: space-evenly;
+        height: 100vh;
+        width: 50%;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.932);
+        right: -50%;
+    }
+
+    .menu__active {
+        z-index: 2;
+        right: 0%;
+    }
+
+    .menu-overlay {
+        display: none;
+        height: 100vh;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .hamburger {
+        margin-left: auto;
+        width: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .mobile-close {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        left: 5px;
+        top: 6px;
+        transition: all .4s;
+        width: 1px;
+        padding: 5px 20px;
+        height: 40px;
+        align-items: center;
+        margin-left: auto;
+
+        &:hover {
+            span {
+                background-color: red;
+
+            }
+        }
+
+        span {
+            transition: all 0.3s;
+            position: absolute;
+            background-color: rgb(156, 156, 156);
+
+            &:first-child {
+                transform: rotate(45deg);
+                width: 3px;
+                height: 72%;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+                width: 3px;
+                height: 72%;
+            }
+        }
+    }
+
+    .header-triangles__left {
+        clip-path: polygon(0 65%, 0% 100%, 100% 100%);
+    }
+    .header-triangles__right {
+        clip-path: polygon(100% 65%, 100% 100%, 0% 100%);
+    }
+}

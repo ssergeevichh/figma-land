@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Graphik';
+  src: local('Graphik Bold'), local('Graphik-Bold'),
+    url('src/fonts/Graphik-Bold.woff2') format('woff2'),
+    url('src/fonts/Graphik-Bold.woff') format('woff'),
+    url('src/fonts/Graphik-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: local('Graphik Regular'), local('Graphik-Regular'),
+      url('src/fonts/Graphik-Regular.woff2') format('woff2'),
+      url('src/fonts/Graphik-Regular.woff') format('woff'),
+      url('src/fonts/Graphik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import 'bootstrap/dist/css/bootstrap-reboot.css';
+
+@import 'base/variables';
+@import 'base/btn';
+@import 'base/title';
+@import 'base/desc';
+
+
+@import 'parts/header';
+@import 'parts/features';
+
+body {
+  font-family: $default-font;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1150px;
+  max-width: 100%;
+}
+
+section,
+footer,
+header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
