@@ -13,6 +13,8 @@
     align-items: center;
 
     &__item {
+        flex-grow: 1;
+        text-align: center;
         padding: 15px;
         font-size: 15px;
         transition: all .3s;
@@ -209,7 +211,6 @@
         position: fixed;
         top: 0;
         justify-content: space-evenly;
-        height: 50vh;
         width: 50%;
         align-items: center;
         flex-direction: column;
@@ -229,7 +230,7 @@
     .menu-overlay {
         display: none;
         height: 100vh;
-        width: 50%;
+        width: 100%;
         position: fixed;
         top: 0;
         left: 0;

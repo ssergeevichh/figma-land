@@ -15,34 +15,21 @@
     }
 
     &--display {
-        display: none;
-    }
-}
-
-@media(max-width: 768px) {
-    .desc {
-        &--margin-bottom-70 {
-            margin-bottom: 70px;
-        }
-
-        &--display {
-            display: block;
-        }
-
-        &--margin-bottom-90 {
-            display: none;
-        }
+        display: block;
     }
 }
 
 @media(max-width:575px) {
     .desc {
         &--display {
-            display: block;
+            display: none;
         }
 
         &--small-screen {
             width: 300px;
+        }
+        &--margin-bottom-70 {
+            margin-bottom: 70px;
         }
     }
 }

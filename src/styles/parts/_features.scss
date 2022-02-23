@@ -9,6 +9,8 @@
     margin-top: 80px;
 
     &__img {
+        // border-radius: 44px;
+        // filter: drop-shadow(0px 8.14769px 63.1446px rgba(0, 0, 0, 0.15));
         width: 100%;
     }
     &__img-mobile {
@@ -87,10 +89,6 @@
         align-items: center;
     }
 
-    .features__desc {
-        display: none;
-    }
-
     .feature-item {
         padding: 0;
 
@@ -106,6 +104,9 @@
 
 @media(max-width:575px) {
     .features {
+        &__desc {
+            margin-bottom: 70px;
+        }
         .container {
             display: flex;
             flex-direction: column;
