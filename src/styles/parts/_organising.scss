@@ -1,0 +1,135 @@
+.organising {
+    padding-top: 226px;
+}
+
+.offering-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img {
+        max-width: 100%;
+        width: 580px;
+    }
+    &__img-2 {
+        display: none;
+    }
+}
+
+.proffer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__text {
+        margin-bottom: 36px;
+    }
+
+    &__wrapper {
+        width: 430px;
+    }
+
+    &__mobile-title {
+        display: none;
+    }
+
+    &__mobile-desc {
+        display: none;
+    }
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    input {
+        padding: 0 30px;
+        border: 1px solid #E8E8E8;
+        border-radius: 39px;
+    }
+}
+
+@media(max-width:1200px) {
+    .offering-block {
+        flex-direction: column;
+
+        &__img {
+            width: 620px;
+            max-width: 100%;
+            margin-bottom: 70px;
+        }
+    }
+
+    .proffer {
+        align-items: center;
+
+        &__wrapper {
+            width: auto;
+        }
+    }
+
+    .input-wrapper {
+        justify-content: space-around;
+    }
+}
+
+@media(max-width:575px) {
+    .organising {
+        padding-top: 100px;
+    }
+
+    .offering-block {
+        &__img-hidden {
+            display: none;
+        }
+        &__img-2 {
+            display: block;
+            order: 4;
+        }
+    }
+
+    .proffer {
+        &__desktop-title {
+            display: none;
+        }
+
+        &__mobile-title {
+            order: 2;
+            display: block;
+        }
+
+        &__mobile-desc {
+            order: 3;
+            display: block;
+        }
+
+        &__wrapper {
+
+            width: 350px;
+            max-width: 100%;
+        }
+
+        &__text-bold-1 {
+            order: 1;
+        }
+
+        &__text-bold-2 {
+            order: 5;
+        }
+
+        &__text {
+            order: 6;
+        }
+    }
+
+    .input-wrapper {
+        order: 7 ;
+        flex-direction: column;
+
+        input {
+            padding: 14px 39px;
+            margin-bottom: 12px;
+        }
+    }
+}

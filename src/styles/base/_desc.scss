@@ -17,11 +17,26 @@
     &--display {
         display: block;
     }
+    &--text-align-left {
+        text-align: left;
+    }
+    &--margin-bottom-71 {
+        margin-bottom: 71px;
+    }
+
+}
+
+@media(max-width:1200px) {
+    .desc {
+        &--text-align-center {
+            text-align: center;
+        }
+    }
 }
 
 @media(max-width:575px) {
     .desc {
-        &--display {
+        &--display-none {
             display: none;
         }
 

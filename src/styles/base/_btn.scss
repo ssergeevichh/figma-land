@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     padding: 11px 65px;
+    justify-content: center;
     color: #fff;
     font-size: 20px;
     background-color: $main-color;
@@ -11,5 +12,22 @@
 
     &:hover {
         background-color: #40a3ff;
+    }
+    &--font-weight-bold {
+        font-weight: 700;
+    }
+    &--size-sm {
+        padding: 14px 39px;
+    }
+
+}
+@media(max-width:1200px) {
+    .btn {
+        &--margin-bottom-60 {
+            margin-bottom: 60px;
+        }
+        &--size-lg {
+            padding: 12px 39px;
+        }
     }
 }
