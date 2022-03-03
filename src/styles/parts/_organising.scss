@@ -1,6 +1,9 @@
 .organising {
     padding-top: 226px;
 }
+.order {
+    order: 3;
+}
 
 .offering-block {
     display: flex;
@@ -11,6 +14,7 @@
         max-width: 100%;
         width: 580px;
     }
+
     &__img-2 {
         display: none;
     }
@@ -25,9 +29,6 @@
         margin-bottom: 36px;
     }
 
-    &__wrapper {
-        width: 430px;
-    }
 
     &__mobile-title {
         display: none;
@@ -38,17 +39,7 @@
     }
 }
 
-.input-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
 
-    input {
-        padding: 0 30px;
-        border: 1px solid #E8E8E8;
-        border-radius: 39px;
-    }
-}
 
 @media(max-width:1200px) {
     .offering-block {
@@ -64,14 +55,13 @@
     .proffer {
         align-items: center;
 
-        &__wrapper {
-            width: auto;
+        &__btn {
+            margin-bottom: 60px;
         }
+
     }
 
-    .input-wrapper {
-        justify-content: space-around;
-    }
+
 }
 
 @media(max-width:575px) {
@@ -83,6 +73,7 @@
         &__img-hidden {
             display: none;
         }
+
         &__img-2 {
             display: block;
             order: 4;
@@ -103,6 +94,9 @@
             order: 3;
             display: block;
         }
+        &__text-order {
+            order: 5;
+        }
 
         &__wrapper {
 
@@ -110,26 +104,10 @@
             max-width: 100%;
         }
 
-        &__text-bold-1 {
-            order: 1;
-        }
-
-        &__text-bold-2 {
-            order: 5;
-        }
 
         &__text {
             order: 6;
         }
     }
 
-    .input-wrapper {
-        order: 7 ;
-        flex-direction: column;
-
-        input {
-            padding: 14px 39px;
-            margin-bottom: 12px;
-        }
-    }
 }

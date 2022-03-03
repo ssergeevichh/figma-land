@@ -1,5 +1,4 @@
 .desc {
-    text-align: center;
     margin: 0 auto;
     width: 532px;
     max-width: 100%;
@@ -13,10 +12,10 @@
     &--color-black {
         color: #374754;
     }
-
-    &--display {
-        display: block;
+    &--text-align-center {
+        text-align: center;
     }
+
     &--text-align-left {
         text-align: left;
     }
@@ -25,26 +24,15 @@
     }
 
 }
-
 @media(max-width:1200px) {
-    .desc {
-        &--text-align-center {
+    .shared-block {
+        &__desc {
             text-align: center;
         }
     }
 }
-
-@media(max-width:575px) {
+@media(max-width: 575px) {
     .desc {
-        &--display-none {
-            display: none;
-        }
-
-        &--small-screen {
-            width: 300px;
-        }
-        &--margin-bottom-70 {
-            margin-bottom: 70px;
-        }
+        font-size: 25px;
     }
 }

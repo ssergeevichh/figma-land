@@ -24,15 +24,23 @@
 @import 'base/btn';
 @import 'base/title';
 @import 'base/desc';
+@import 'base/shared-block';
 
 
 @import 'parts/header';
 @import 'parts/features';
 @import 'parts/organising';
+@import 'parts/prototyping';
+@import 'parts/partners';
+@import 'parts/testimonials';
 
 body {
   font-family: $default-font;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

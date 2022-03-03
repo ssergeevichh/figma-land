@@ -1,0 +1,39 @@
+.shared-block {
+    &__title {
+        width: 420px;
+
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+    }
+    
+    &__desc {
+        margin-bottom: 70px;
+    }
+    &__btn {
+        margin: 80px auto 0 auto;
+    }
+}
+
+
+@media(max-width:1200px) {
+    .shared-block {
+        &__title {
+            text-align: center;
+            width: auto;
+        }
+    }
+}
+
+@media(max-width:575px) {
+    .shared-block {
+        &__desc-display {
+            display: none;
+        }
+
+        &__desc {
+            width: 300px;
+        }
+    }
+}
