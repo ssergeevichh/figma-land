@@ -24,7 +24,7 @@
 @import 'base/btn';
 @import 'base/title';
 @import 'base/desc';
-@import 'base/shared-block';
+@import 'base/input';
 
 
 @import 'parts/header';
@@ -44,9 +44,8 @@ a {
 }
 
 .container {
-  padding: 0 15px;
   margin: 0 auto;
-  width: 1200px;
+  width: 1250px;
   max-width: 100%;
 }
 

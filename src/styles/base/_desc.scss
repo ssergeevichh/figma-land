@@ -5,34 +5,17 @@
     font-size: 28px;
     font-weight: 400;
 
-    &--margin-bottom-90 {
-        margin-bottom: 90px;
-    }
-
-    &--color-black {
-        color: #374754;
-    }
     &--text-align-center {
         text-align: center;
     }
 
-    &--text-align-left {
-        text-align: left;
-    }
-    &--margin-bottom-71 {
-        margin-bottom: 71px;
-    }
+}
 
-}
-@media(max-width:1200px) {
-    .shared-block {
-        &__desc {
-            text-align: center;
-        }
-    }
-}
 @media(max-width: 575px) {
     .desc {
         font-size: 25px;
+        &__desktop {
+            display: none;
+        }
     }
 }

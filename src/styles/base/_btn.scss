@@ -9,6 +9,7 @@
     border-radius: $border-radius;
     border: none;
     transition: all .3s;
+    font-size: 20px;
 
     &:hover {
         background-color: #40a3ff;
@@ -16,4 +17,16 @@
     &--font-weight-bold {
         font-weight: 700;
     }
+    &--form-btn {
+        padding: 15px 39px
+    }
 }
+@media(max-width:575px) {
+    .btn {
+        &--form-btn {
+            padding: 12px 39px;
+        }
+    }
+}
+ 
+
