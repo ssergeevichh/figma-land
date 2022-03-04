@@ -1,25 +1,29 @@
 .partners {
-    padding: 130px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 130px 15px 80px 15px;
 
     &__btn {
         margin: 0 auto
     }
 
-    .shared-block {
-        margin-bottom: 80px;
+    &__desc {
+        margin-bottom: 90px;
     }
 }
 
 .companies {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 80px;
 }
 
 .company-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 23px 0;
+    padding: 23px 10px;
     border: 1px solid #D8D8D8;
     transition: all .3s;
 
@@ -42,6 +46,8 @@
         column-gap: 90px;
         row-gap: 20px;
         padding: 0 30px;
+        padding-bottom: 80px;
+
     }
 }
 
@@ -50,10 +56,15 @@
         column-gap: 16px;
         row-gap: 7px;
         padding: 0 20px;
+        padding-bottom: 80px;
+
     }
 }
 
 @media(max-width:575px) {
+    .partners {
+        padding: 70px 15px 80px 15px;
+    }
     .companies {
         grid-template-columns: 1fr;
         row-gap: 30px;

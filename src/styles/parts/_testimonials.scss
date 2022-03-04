@@ -1,12 +1,8 @@
 .testimonials {
-    padding: 110px 0 100px 0;
-
-    .shared-block {
-        margin-bottom: 80px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    padding: 110px 15px 100px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__title {
         margin-bottom: 90px;
@@ -20,6 +16,10 @@
         width: 960px;
         max-width: 100%;
         margin-bottom: 50px;
+    }
+
+    &__btn {
+        margin-top: 80px;
     }
 }
 
@@ -36,6 +36,8 @@
 
 @media(max-width:575px) {
     .testimonials {
+        padding: 50px 15px 100px 15px;
+
         &__desc {
             width: 280px;
             font-weight: 700;
@@ -43,12 +45,14 @@
             line-height: 17px;
         }
     }
+
     .author {
         &__aim {
             color: #374754;
             font-weight: 700;
             font-size: 11px;
         }
+
         &__position {
             font-size: 13px;
         }
