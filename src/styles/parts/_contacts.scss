@@ -1,0 +1,152 @@
+.contacts {
+    padding: 200px 20px 50px 20px;
+    margin: 0 auto;
+
+    &__desc {
+        margin-bottom: 50px;
+    }
+}
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form {
+    min-height: 670px;
+    padding: 52px 50px;
+    width: 450px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+
+    &__area {
+        min-height: 193px;
+        background: #F5F5F5;
+        border: 1px solid #E8E8E8;
+        width: 100%;
+        padding: 23px 20px;
+    }
+
+    &__btn {
+        margin-right: auto;
+    }
+}
+
+.info {
+    display: flex;
+}
+
+.details-location {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__map {
+        margin: 60px auto;
+    }
+
+    &__social-block {
+        margin-right: auto;
+
+        svg {
+            &:hover {
+                path {
+                    transition: all .3s;
+                    fill: #73bbff;
+                }
+            }
+        }
+    }
+}
+
+.info-item {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        text-align: center;
+    }
+}
+
+@media(max-width:1200px) {
+    .contact-form {
+        padding: 52px 20px;
+    }
+}
+
+@media(max-width:991px) {
+    .contacts-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .details-location {
+        &__social-block {
+            margin: 0 auto;
+        }
+
+    }
+
+    .contact-form {
+        &__btn {
+
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .info {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .info-item {
+        justify-content: start;
+        flex-direction: row;
+        margin-bottom: 25px;
+        &:first-child {
+            order: 1;
+        }
+        &__img {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    .details-location {
+        &__map {
+            width: 500px;
+        }
+    }
+}
+@media(max-width:575px) {
+    .details-location {
+        flex-direction: column-reverse;
+        &__social-block {
+            display: flex;
+            margin-bottom: 80px;
+        }
+        &__map {
+            display: none;
+        }
+        &__info {
+            margin-bottom: 50px;
+        }
+    }
+}
