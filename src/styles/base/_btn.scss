@@ -10,9 +10,10 @@
     border: none;
     transition: all .3s;
     font-size: 20px;
+    white-space: nowrap;
 
     &:hover {
-        background-color: #40a3ff;
+        background-color: #53acff;
     }
     &--font-weight-bold {
         font-weight: 700;

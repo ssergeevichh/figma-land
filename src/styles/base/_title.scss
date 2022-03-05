@@ -16,6 +16,9 @@
     color: $text-color;
     text-align: center;
 
+    &--color-white {
+        color: white;
+    }
 }
 
 @media(max-width: 575px) {
