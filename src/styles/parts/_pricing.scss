@@ -115,3 +115,10 @@
 
     }
 }
+@media(max-width:575px) {
+    .tariff {
+        &__btn {
+            padding: 11px 45px;
+        }
+    }
+}
