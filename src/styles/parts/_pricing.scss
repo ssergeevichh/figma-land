@@ -116,6 +116,11 @@
     }
 }
 @media(max-width:575px) {
+    .pricing {
+        &__tariff {
+            margin: 0 0 50px 0;
+        }
+    }
     .tariff {
         &__btn {
             padding: 11px 45px;

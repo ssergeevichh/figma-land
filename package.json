@@ -12,6 +12,7 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
+    "active-menu-link": "^1.1.8",
     "bootstrap": "^5.1.3"
   }
 }

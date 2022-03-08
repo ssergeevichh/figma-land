@@ -48,13 +48,15 @@
     padding-left: 10px;
 }
 
-.form {
-    padding: 36px 0;
-    display: flex;
+.subscription-form {
+    width: 88%;
+    padding: 36px 20px 0 20px;
+    display: grid;
+    grid-template-columns: 62% 172px;
+    align-items: center;
+    column-gap: 10px;
 
-    &__input {
-        margin-right: 10px;
-    }
+
 }
 
 @media(min-width:1201px) {
@@ -90,6 +92,9 @@
     .subscription-request {
         align-items: center;
         padding-left: 0;
+    }
+    .subscription-form {
+        width: auto;
     }
 }
 
@@ -128,13 +133,10 @@
     .subscription-request {
         width: 100%;
     }
-    .form {
-        padding: 36px 10px;
+    .subscription-form {
+        grid-template-columns: 1fr;
         width: 100%;
-        flex-direction: column;
         &__input {
-            padding: 15px 39px;
-            margin-right: 0;
             margin-bottom: 12px;
         }
     }

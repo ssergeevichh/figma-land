@@ -13,6 +13,7 @@
 
 @media(max-width: 575px) {
     .desc {
+        padding: 0 10px;
         font-size: 25px;
         &__desktop {
             display: none;

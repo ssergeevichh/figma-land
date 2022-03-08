@@ -1,10 +1,12 @@
 import '../styles/main.scss';
+import ActiveMenuLink from "active-menu-link"
 
 const hamburger = document.querySelector('.hamburger');
 const closeBtn = document.querySelector('.mobile-close');
 const menu = document.querySelector('.menu');
 const menuOverlay = document.querySelector('.menu-overlay');
 const playBtn = document.querySelector('.play-button-bg');
+const headerEl = document.querySelector('#header')
 const video = document.querySelector('.video');
 const windowExtension = window.matchMedia("(max-width: 575px)");
 let isPaused;
@@ -12,17 +14,29 @@ let isPaused;
 hamburger.addEventListener('click', function () {
     menu.classList.add('menu__active')
     menuOverlay.style.display = 'block'
-    hamburger.style.display = 'none'
+    hamburger.style.opacity = 0
+    hamburger.style.visibility = 'hidden'
 
+    closeBtn.style.visibility = 'visible'
+    closeBtn.style.opacity = 1
 })
 
 document.addEventListener('click', function ({ target }) {
-    console.log(target);
     if (target === closeBtn || target.tagName === 'SPAN' || target === menuOverlay) {
         menu.classList.remove('menu__active')
         menuOverlay.style.display = ''
 
-        setTimeout(() => hamburger.style.display = 'flex', 200)
+        // setTimeout(() => hamburger.style.display = 'flex', 200)
+        closeBtn.style.visibility = 'hidden'
+        closeBtn.style.opacity = 0
+
+        setTimeout(() => {
+            hamburger.style.visibility = 'visible'
+            hamburger.style.opacity = 1
+
+        }, 100)
+
+
     }
 })
 
@@ -38,7 +52,7 @@ playBtn.addEventListener('click', () => {
     video.play()
 
     isPaused = false
-    
+
     if (isPaused) {
         playBtn.style.display = 'block'
     }
@@ -57,3 +71,20 @@ video.addEventListener('click', () => {
 })
 
 
+if (windowExtension.matches) {
+    let options = {
+        activeClass: "active-item"
+    }
+
+    new ActiveMenuLink('.menu', options)
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 150) {
+            headerEl.classList.add('scrolled-header')
+        }
+        else {
+            headerEl.classList.remove('scrolled-header')
+        }
+
+    })
+
+}
