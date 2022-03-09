@@ -1,14 +1,10 @@
-.header {
+.offer-component {
     background-image: url('src/assets/img/bg-main.jpg');
+    padding-top: 280px;
     padding-bottom: 120px;
     min-height: 930px;
 }
 
-.header-substrate {
-    position: relative;
-    height: 75px;
-    margin-bottom: 175px;
-}
 
 .scrolled-header {
     background-color: #11395e;
@@ -60,10 +56,12 @@
     width: 200px;
 }
 
-.offer-component {
-    width: 100%;
+.header {
+    border-radius: 0 0 30px 30px;
+    width: 1250px;
+    max-width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     padding: 0 15px;
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
@@ -171,7 +169,7 @@
 
 
 @media(max-width:991px) {
-    .offer-component {
+    .header {
         grid-template-columns: 200px 1fr;
     }
 
@@ -190,7 +188,7 @@
 }
 
 @media(max-width:768px) {
-    .offer-component {
+    .header {
         margin-bottom: 115px;
         grid-template-columns: 170px 1fr;
     }
@@ -199,11 +197,6 @@
         width: 170px;
     }
 
-    .menu {
-        &__item {
-            padding: 20px 11px;
-        }
-    }
 
     .introduction {
         &__title {
@@ -220,6 +213,14 @@
             padding: 10px;
         }
     }
+
+    .menu {
+        &__item {
+            a {
+                padding: 15px 0;
+            }
+        }
+    }
 }
 
 
@@ -228,15 +229,8 @@
         overflow-x: hidden;
     }
 
-    .header-substrate {
-        width: 100%;
-        height: 65px;
-        margin-bottom: 115px;
-    }
-
-    .offer-component {
-        position: fixed;
-        width: 100%;
+    .header {
+        border-radius: 0;
     }
 
     .active-item {
