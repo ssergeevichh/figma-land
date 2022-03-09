@@ -1,8 +1,9 @@
 import '../styles/main.scss';
-import ActiveMenuLink from "active-menu-link"
 
 const hamburger = document.querySelector('.hamburger');
 const closeBtn = document.querySelector('.mobile-close');
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('.menu-list > li')
 const menu = document.querySelector('.menu');
 const menuOverlay = document.querySelector('.menu-overlay');
 const playBtn = document.querySelector('.play-button-bg');
@@ -17,6 +18,8 @@ hamburger.addEventListener('click', function () {
     hamburger.style.opacity = 0
     hamburger.style.visibility = 'hidden'
 
+    headerEl.classList.add('scrolled-header')
+
     closeBtn.style.visibility = 'visible'
     closeBtn.style.opacity = 1
 })
@@ -26,7 +29,10 @@ document.addEventListener('click', function ({ target }) {
         menu.classList.remove('menu__active')
         menuOverlay.style.display = ''
 
-        // setTimeout(() => hamburger.style.display = 'flex', 200)
+        if(window.scrollY === 0) {
+            headerEl.classList.remove('scrolled-header')
+        }
+        
         closeBtn.style.visibility = 'hidden'
         closeBtn.style.opacity = 0
 
@@ -70,21 +76,36 @@ video.addEventListener('click', () => {
 
 })
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 1) {
+        headerEl.classList.add('scrolled-header')
+    }
+    else if (!menu.classList.contains('menu__active')) {
+        headerEl.classList.remove('scrolled-header')
+    }
+})
 
 if (windowExtension.matches) {
-    let options = {
-        activeClass: "active-item"
-    }
+    window.addEventListener('scroll', () => {
 
-    new ActiveMenuLink('.menu', options)
-    document.addEventListener('scroll', () => {
-        if (window.scrollY > 150) {
-            headerEl.classList.add('scrolled-header')
-        }
-        else {
-            headerEl.classList.remove('scrolled-header')
-        }
 
+
+        let currentSection = ''
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop
+            const sectionHeight = section.clientHeight
+            if (scrollY >= (sectionTop - sectionHeight / 3)) {
+                currentSection = section.getAttribute('id')
+            }
+        })
+        navLi.forEach( li => {
+            li.classList.remove('active-item')
+            if(li.classList.contains(currentSection)){
+                li.classList.add('active-item')
+            }
+        })
     })
-
+    
 }
+

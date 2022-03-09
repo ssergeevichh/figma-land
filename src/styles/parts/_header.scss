@@ -1,18 +1,20 @@
 .header {
     background-image: url('src/assets/img/bg-main.jpg');
-    padding: 30px 0 120px 0;
+    padding-bottom: 120px;
     min-height: 930px;
 }
 
-
+.header-substrate {
+    position: relative;
+    height: 75px;
+    margin-bottom: 175px;
+}
 
 .scrolled-header {
     background-color: #11395e;
     box-shadow: 0px 6px 8px rgb(0 0 0 / 17%);
     transition: all .2s;
-    position: fixed;
     z-index: 1;
-    margin-bottom: 0 !important;
     width: 100%;
 }
 
@@ -32,6 +34,7 @@
         list-style-type: none;
 
         a {
+
             color: #fff;
         }
 
@@ -43,8 +46,10 @@
 }
 
 .menu-list {
-    display: contents;
+    display: flex;
+    padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .logo {
@@ -52,12 +57,14 @@
 }
 
 .offer-component {
+    width: 100%;
+    position: fixed;
     z-index: 1;
     padding: 0 15px;
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
-    grid-auto-rows: auto;
     margin-bottom: 175px;
+    transition: all .2s;
 
     &__social-block {
         margin-left: auto;
@@ -173,14 +180,7 @@
     }
 
     .social-block {
-        justify-content: start;
-        order: 3;
-        grid-column-start: 1;
-        grid-column-end: 3;
-
-        &__item {
-            padding: 10px 15px;
-        }
+        display: none;
     }
 
 }
@@ -197,7 +197,7 @@
 
     .menu {
         &__item {
-            padding: 20px 12px;
+            padding: 20px 11px;
         }
     }
 
@@ -224,16 +224,23 @@
         overflow-x: hidden;
     }
 
+    .header-substrate {
+        width: 100%;
+        height: 65px;
+        margin-bottom: 115px;
+    }
+
+    .offer-component {
+        position: fixed;
+        width: 100%;
+    }
+
     .active-item {
-        color: $main-color !important;
-    }
+        background-color: rgb(37, 37, 37);
 
-    .header {
-        padding: 0 0 120px 0;
-    }
-
-    .social-block {
-        display: none;
+        a {
+            color: $main-color !important;
+        }
     }
 
     .logo {
@@ -262,10 +269,12 @@
         &__item {
             width: 100%;
             transition: all .3s;
+            padding: 0;
 
             a {
+                padding: 20px 12px;
+                display: block;
                 width: 100%;
-                padding: 10px 29%;
 
             }
 
@@ -275,6 +284,10 @@
             }
 
         }
+    }
+
+    .menu-list {
+        flex-direction: column;
     }
 
     .menu__active {
