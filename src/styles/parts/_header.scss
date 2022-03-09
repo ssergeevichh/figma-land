@@ -18,6 +18,12 @@
     width: 100%;
 }
 
+.active-item {
+    a {
+        color: rgb(255, 197, 121) !important;
+    }
+}
+
 .menu {
     color: #fff;
     display: flex;
@@ -25,16 +31,14 @@
     align-items: center;
 
     &__item {
-        color: #fff;
         flex-grow: 1;
         text-align: center;
-        padding: 15px;
         font-size: 15px;
         transition: all .3s;
         list-style-type: none;
 
         a {
-
+            padding: 15px;
             color: #fff;
         }
 

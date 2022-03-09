@@ -29,10 +29,10 @@ document.addEventListener('click', function ({ target }) {
         menu.classList.remove('menu__active')
         menuOverlay.style.display = ''
 
-        if(window.scrollY === 0) {
+        if (window.scrollY === 0) {
             headerEl.classList.remove('scrolled-header')
         }
-        
+
         closeBtn.style.visibility = 'hidden'
         closeBtn.style.opacity = 0
 
@@ -45,8 +45,6 @@ document.addEventListener('click', function ({ target }) {
 
     }
 })
-
-
 
 if (windowExtension.matches) {
     video.setAttribute('poster', '/img/mobile-laptop.png')
@@ -83,29 +81,23 @@ window.addEventListener('scroll', () => {
     else if (!menu.classList.contains('menu__active')) {
         headerEl.classList.remove('scrolled-header')
     }
+
+    let currentSection = ''
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.clientHeight
+        if (scrollY >= (sectionTop - sectionHeight / 3)) {
+            currentSection = section.getAttribute('id')
+        }
+    })
+    navLi.forEach(li => {
+        li.classList.remove('active-item')
+        if (li.classList.contains(currentSection)) {
+            li.classList.add('active-item')
+        }
+    })
 })
 
-if (windowExtension.matches) {
-    window.addEventListener('scroll', () => {
 
-
-
-        let currentSection = ''
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop
-            const sectionHeight = section.clientHeight
-            if (scrollY >= (sectionTop - sectionHeight / 3)) {
-                currentSection = section.getAttribute('id')
-            }
-        })
-        navLi.forEach( li => {
-            li.classList.remove('active-item')
-            if(li.classList.contains(currentSection)){
-                li.classList.add('active-item')
-            }
-        })
-    })
-    
-}
 
