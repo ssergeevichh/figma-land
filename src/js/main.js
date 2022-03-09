@@ -18,7 +18,7 @@ hamburger.addEventListener('click', function () {
     hamburger.style.opacity = 0
     hamburger.style.visibility = 'hidden'
 
-    headerEl.classList.add('scrolled-header')
+    headerEl.classList.add('header--active-state')
 
     closeBtn.style.visibility = 'visible'
     closeBtn.style.opacity = 1
@@ -30,7 +30,7 @@ document.addEventListener('click', function ({ target }) {
         menuOverlay.style.display = ''
 
         if (window.scrollY === 0) {
-            headerEl.classList.remove('scrolled-header')
+            headerEl.classList.remove('header--active-state')
         }
 
         closeBtn.style.visibility = 'hidden'
@@ -76,10 +76,10 @@ video.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 1) {
-        headerEl.classList.add('scrolled-header')
+        headerEl.classList.add('header--active-state')
     }
     else if (!menu.classList.contains('menu__active')) {
-        headerEl.classList.remove('scrolled-header')
+        headerEl.classList.remove('header--active-state')
     }
 
     let currentSection = ''
